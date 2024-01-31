@@ -116,8 +116,10 @@ h1 {
 @media (max-width: 600px) {
     
  .background_img {
-    height: 300px;
-    background-position: 45%;
+    background: url(assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 0%;
  }
 
     .flex-container {
