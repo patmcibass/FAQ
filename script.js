@@ -17,7 +17,11 @@ const minus3 = document.getElementById('minus3');
 const minus4 = document.getElementById('minus4');
 
 
-question1.addEventListener('click', (e) => {
+
+
+
+
+const q1 = () => {
     answer1.classList.toggle('hidden');
     plus1.classList.toggle('hidden');
     minus1.classList.toggle('hidden');
@@ -42,11 +46,9 @@ question1.addEventListener('click', (e) => {
     else {
         minus1.setAttribute('aria-hidden', 'true');
     }
+}
 
-
-});
-
-question2.addEventListener('click', () => {
+const q2 = () => {
     answer2.classList.toggle('hidden');
     plus2.classList.toggle('hidden');
     minus2.classList.toggle('hidden');
@@ -71,9 +73,9 @@ question2.addEventListener('click', () => {
     else {
         minus2.setAttribute('aria-hidden', 'true');
     }
-});
+}
 
-question3.addEventListener('click', () => {
+const q3 = () => {
     answer3.classList.toggle('hidden');
     plus3.classList.toggle('hidden');
     minus3.classList.toggle('hidden');
@@ -98,9 +100,9 @@ question3.addEventListener('click', () => {
     else {
         minus3.setAttribute('aria-hidden', 'true');
     }
-});
+}
 
-question4.addEventListener('click', () => {
+const q4 = () => {
     answer4.classList.toggle('hidden');
     plus4.classList.toggle('hidden');
     minus4.classList.toggle('hidden');
@@ -124,5 +126,35 @@ question4.addEventListener('click', () => {
     }
     else {
         minus4.setAttribute('aria-hidden', 'true');
+    }
+}
+
+
+question1.addEventListener('click', q1);
+question1.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter'){
+        q1();
+    }
+});
+
+
+question2.addEventListener('click', q2);
+question2.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter'){
+        q2();
+    }
+});
+
+question3.addEventListener('click', q3);
+question3.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter'){
+        q3();
+    }
+});
+
+question4.addEventListener('click', q4);
+question4.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter'){
+        q4();
     }
 });
